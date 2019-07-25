@@ -43,7 +43,7 @@ This are set of UDFs and queries that you can use with Hive to use TPCH datagen 
     ```
 2. Upload the resources to DFS.
     ```shell
-    hdfs dfs -copyFromLocal resoruces /tmp
+    hdfs dfs -copyFromLocal resources /tmp
     ```
 
 3. Run TPCHDataGen.hql with settings.hql file and set the required config variables.
