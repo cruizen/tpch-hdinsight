@@ -82,7 +82,7 @@ This are set of UDFs and queries that you can use with Hive to use TPCH datagen 
 
 If you want to run all the queries 10 times and measure the times it takes, you can use the following command
    
-    echo "Query,run,start_time,end_time,duration" >> times_orc.csv
+    echo "Query,run,start_time,end_time,duration" >> times_orc.csv;
     for f in queries/*.sql; do for i in {1..10} ; do STARTTIME="`date +%s`";  beeline -u "jdbc:hive2://`hostname -f`:10001/tpch_orc;transportMode=http" -i settings.hql -f $f  > $f.run_$i.out 2>&1 ; ENDTIME="`date +%s`"; echo "$f,$i,$STARTTIME,$ENDTIME,$(($ENDTIME-$STARTTIME))" >> times_orc.csv; done; done;
 
 
