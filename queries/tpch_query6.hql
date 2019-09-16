@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query6_result AS
+--CREATE TABLE tpch_query6_result AS
 
 SELECT sum(l_extendedprice * l_discount) AS revenue
 FROM lineitem

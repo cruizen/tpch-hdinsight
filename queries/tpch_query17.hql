@@ -7,7 +7,7 @@ SELECT l_partkey AS t_partkey
 FROM lineitem
 GROUP BY l_partkey;
 
-CREATE TABLE tpch_query17_result AS
+--CREATE TABLE tpch_query17_result AS
 
 SELECT sum(l_extendedprice) / 7.0 AS avg_yearly
 FROM (

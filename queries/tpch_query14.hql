@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query14_result AS
+--CREATE TABLE tpch_query14_result AS
 
 SELECT 100.00 * sum(CASE 
 			WHEN p_type LIKE 'PROMO%'

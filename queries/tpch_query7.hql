@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query7_result AS
+--CREATE TABLE tpch_query7_result AS
 
 SELECT supp_nation
 	,cust_nation

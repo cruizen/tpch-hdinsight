@@ -21,7 +21,7 @@ WHERE l_receiptdate > l_commitdate
 	AND l_orderkey IS NOT NULL
 GROUP BY l_orderkey;
 
-CREATE TABLE tpch_query21_result AS
+--CREATE TABLE tpch_query21_result AS
 
 SELECT s_name
 	,count(1) AS numwait

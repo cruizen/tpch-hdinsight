@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query16_result AS
+--CREATE TABLE tpch_query16_result AS
 
 SELECT p_brand
 	,p_type

@@ -16,7 +16,7 @@ AS
 SELECT max(total_revenue) AS max_revenue
 FROM revenue_cached;
 
-CREATE TABLE tpch_query15_result AS
+--CREATE TABLE tpch_query15_result AS
 
 SELECT s_suppkey
 	,s_name

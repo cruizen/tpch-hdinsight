@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query8_result AS
+--CREATE TABLE tpch_query8_result AS
 
 SELECT o_year
 	,sum(CASE 

@@ -42,7 +42,7 @@ FROM q20_tmp3_cached
 WHERE ps_availqty > sum_quantity
 GROUP BY ps_suppkey;
 
-CREATE TABLE tpch_query20_result AS
+--CREATE TABLE tpch_query20_result AS
 
 SELECT s_name
 	,s_address

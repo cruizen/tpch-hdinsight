@@ -19,7 +19,7 @@ AS
 SELECT sum(part_value) AS total_value
 FROM q11_part_tmp_cached;
 
-CREATE TABLE tpch_query11_result AS
+--CREATE TABLE tpch_query11_result AS
 
 SELECT ps_partkey
 	,part_value AS value

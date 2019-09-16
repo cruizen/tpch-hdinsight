@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query10_result AS
+--CREATE TABLE tpch_query10_result AS
 
 SELECT c_custkey
 	,c_name

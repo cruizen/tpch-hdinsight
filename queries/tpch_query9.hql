@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query9_result AS
+--CREATE TABLE tpch_query9_result AS
 
 SELECT nation
 	,o_year

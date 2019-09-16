@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query12_result AS
+--CREATE TABLE tpch_query12_result AS
 
 SELECT l_shipmode
 	,sum(CASE 

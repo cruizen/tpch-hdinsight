@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query5_result AS
+--CREATE TABLE tpch_query5_result AS
 
 SELECT n_name
 	,sum(l_extendedprice * (1 - l_discount)) AS revenue

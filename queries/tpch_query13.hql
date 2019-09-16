@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query13_result AS
+--CREATE TABLE tpch_query13_result AS
 
 SELECT c_count
 	,count(*) AS custdist

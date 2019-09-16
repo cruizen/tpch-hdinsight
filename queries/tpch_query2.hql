@@ -16,7 +16,7 @@ WHERE p_partkey = ps_partkey
 	AND r_name = 'EUROPE'
 GROUP BY p_partkey;
 
-CREATE TABLE tpch_query2_result AS
+--CREATE TABLE tpch_query2_result AS
 
 SELECT s_acctbal
 	,s_name

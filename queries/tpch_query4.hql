@@ -1,4 +1,4 @@
-CREATE TABLE tpch_query4_result AS
+--CREATE TABLE tpch_query4_result AS
 
 SELECT o_orderpriority
 	,count(*) AS order_count

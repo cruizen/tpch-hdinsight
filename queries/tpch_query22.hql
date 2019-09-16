@@ -29,7 +29,7 @@ CREATE VIEW IF NOT EXISTS q22_orders_tmp_cached AS
 	FROM orders
 	GROUP BY o_custkey;
 
-CREATE TABLE tpch_query22_result AS
+--CREATE TABLE tpch_query22_result AS
 
 SELECT cntrycode
 	,count(1) AS numcust
