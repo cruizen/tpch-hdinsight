@@ -9,7 +9,7 @@ This are set of UDFs and queries that you can use with Hive to use TPCH datagen 
 1. Clone this repo.
 
     ```shell
-    git clone https://github.com/dharmeshkakadia/tpch-datagen-as-hive-query/ && cd tpch-datagen-as-hive-query
+    git clone https://github.com/cruizen/tpch-hdinsight.git && cd tpch-hdinsight
     ```
 2. Run TPCHDataGen.hql with settings.hql file and set the required config variables.
     ```shell
@@ -24,6 +24,11 @@ This are set of UDFs and queries that you can use with Hive to use TPCH datagen 
     ```shell
     hive -i settings.hql -f ddl/createAllExternalTables.hql -hiveconf LOCATION=/HiveTPCH/ -hiveconf DBNAME=tpch
     ```
+    For HDI 4.0, allow permissions to other users on the storage by running 
+    ```shell
+    hdfs dfs -chmod -R 777 /HiveTPCH
+    ```
+    
     Generate ORC tables and analyze
     ```shell
     hive -i settings.hql -f ddl/createAllORCTables.hql -hiveconf ORCDBNAME=tpch_orc -hiveconf SOURCE=tpch 
@@ -39,7 +44,7 @@ This are set of UDFs and queries that you can use with Hive to use TPCH datagen 
 1. Clone this repo.
 
     ```shell
-    git clone https://github.com/dharmeshkakadia/tpch-datagen-as-hive-query/ && cd tpch-datagen-as-hive-query
+    git clone https://github.com/cruizen/tpch-hdinsight.git && cd tpch-hdinsight
     ```
 2. Upload the resources to DFS.
     ```shell
@@ -54,6 +59,7 @@ This are set of UDFs and queries that you can use with Hive to use TPCH datagen 
     `PARTS` is a number of task to use for datagen (parrellelization), 
     `LOCATION` is the directory where the data will be stored on HDFS, 
     `TPCHBIN` is where the resources are uploaded on step 2. You can specify specific settings in settings.hql file.
+    When ADLS is used as the storage instead of Azure blob storage, replace wasb in the URL for fs.defaultFS with abfs since ADLS uses the abfs:// storage scheme.
 
 4. Now you can create tables on the generated data.
     ```shell
