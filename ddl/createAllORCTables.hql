@@ -23,7 +23,7 @@ L_SHIPMODE STRING,
 L_COMMENT STRING)
 PARTITIONED BY (L_SHIPDATE STRING)
 STORED AS ORC
-TBLPROPERTIES('orc.bloom.filter.columns'='*','orc.compress'='ZLIB');
+TBLPROPERTIES('orc.bloom.filter.columns'='*','orc.compress'='ZLIB','auto.purge'='true');
 
 INSERT OVERWRITE TABLE lineitem PARTITION(L_SHIPDATE)
 SELECT 
@@ -59,7 +59,7 @@ O_SHIPPRIORITY INT,
 O_COMMENT STRING)
 PARTITIONED BY (O_ORDERDATE STRING)
 STORED AS ORC
-TBLPROPERTIES('orc.bloom.filter.columns'='*','orc.compress'='ZLIB');
+TBLPROPERTIES('orc.bloom.filter.columns'='*','orc.compress'='ZLIB','auto.purge'='true');
 
 INSERT OVERWRITE TABLE orders PARTITION(O_ORDERDATE)
 SELECT 
